@@ -1,6 +1,4 @@
 import "/assets/scss/main.scss"
-
-//SWİPER
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: "auto",
   spaceBetween: 30,
@@ -90,34 +88,12 @@ const postsData = [{
     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus obcaecati eius consequuntur libero voluptatem tempora ullam sequi animi hic excepturi, at cum expedita facere necessitatibus nihil sapiente repellat nemo quae.'
   },
 ]
-console.log(postsData[0].img, postsData[1].title, postsData[2].text)
-// POST EKLEME FONKSİYONU
-
-// const addPost = (img, title) => {
-//   const postEl = document.createElement('div')
-//   postEl.className = 'post'
-
-//   const imgWrapper = document.createElement('div')
-//   imgWrapper.className = 'imgWrapper'
-
-//   const img = document.createElement('img')
-//   img.src = img
-
-//   imgWrapper.append(img)
-
-//   const title = document.createElement('div')
-//   title.className = 'title'
-
-//   postEl.append(imgWrapper)
-//   posts.append(postEl)
-// }
 
 const posts = document.querySelector('.posts');
 const postInfo = document.querySelector(".postInfo")
 const offButton = document.querySelector(".offButton")
-postsData.forEach((p) => {
-  // addPost(post.img, post.title)
 
+postsData.forEach((p) => {
   const post = document.createElement('div')
   post.className = 'post'
   post.onclick = () => {
@@ -125,9 +101,7 @@ postsData.forEach((p) => {
     postInfo.querySelector('.title').textContent = p.title
     postInfo.querySelector("img").src = p.img
     postInfo.querySelector(".text").textContent = p.text
-    console.log(p)
   }
-
 
   const imgWrapper = document.createElement('div')
   imgWrapper.className = 'imgWrapper'
@@ -141,55 +115,24 @@ postsData.forEach((p) => {
   title.className = 'title'
   title.textContent = p.title
 
-  console.log(title)
-
-  // const text = document.createElement("div")
-  // text.className = "text"
-  // text.textContent = p.text
-
-
   post.append(imgWrapper)
   post.append(title)
-  // post.append(text)
-
   posts.append(post)
-  console.log(post)
 })
+
 offButton.onclick = () => {
   postInfo.classList.remove("active")
 }
 
-// FOR DÖNGÜSÜ
-// for (let i = 0; i < 10; i++) {
-//   console.log(i)
-// }
-
-//DÖNGÜNÜN KISA YAZIMI
-// postsData.forEach(f => console.log(f.id))
-
-// postsData.forEach(el => {
-
-// })
-
-
-console.log(posts)
-
 const menu = document.querySelector(".menu")
+
 const menuButton = document.querySelector(".menuButton")
-
 document.onclick = (e) => {
-  console.log('Event ', event)
-  // console.log('Event Target', event.target)
-
   if (e.target.closest('.menuButton')) {
     menu.classList.toggle("active")
-    // if (menu.classList.contains('active')) {
-    //   menu.classList.remove("active")
-    // } else menu.classList.add("active")
   }
   if (e.target == menuButton) {
     return
   }
   menu.classList.remove("active")
-
 }
