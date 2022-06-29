@@ -1,5 +1,23 @@
 import "/assets/scss/main.scss"
+import Swiper, {
+  Navigation,
+  Pagination
+} from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import kapi from "/assets/img/kapi.webp";
+import kaktus from "/assets/img/kaktus.webp";
+import elma from "/assets/img/elma.webp";
+import gokdelen from "/assets/img/gokdelen.webp";
+import post from '/assets/img/post.webp';
+import post2 from '/assets/img/post2.webp';
+import post3 from '/assets/img/post3.webp';
+import post4 from '/assets/img/post4.jpg';
+import post5 from '/assets/img/post5.webp';
+import post6 from '/assets/img/post6.webp';
 const swiper = new Swiper(".mySwiper", {
+  modules: [Navigation, Pagination],
   slidesPerView: "auto",
   spaceBetween: 30,
   pagination: {
@@ -14,25 +32,25 @@ const swiper = new Swiper(".mySwiper", {
 
 const swiperData = [{
     id: 1,
-    img: "/assets/img/kapı.webp",
+    img: kapi,
     title: "Your most unhappy <br> customers are your greatest source of learning.",
     text: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."
   },
   {
     id: 2,
-    img: "/assets/img/kaktus.webp",
+    img: kaktus,
     title: "Your most unhappy <br> customers are your greatest source of learning.",
     text: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."
   },
   {
     id: 3,
-    img: "/assets/img/elma.webp",
+    img: elma,
     title: "Your most unhappy <br> customers are your greatest source of learning.",
     text: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."
   },
   {
     id: 4,
-    img: "/assets/img/gokdelen.webp",
+    img: gokdelen,
     title: "Your most unhappy <br> customers are your greatest source of learning.",
     text: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."
   },
@@ -53,37 +71,37 @@ swiperData.forEach((p) => {
 
 const postsData = [{
     id: 1,
-    img: '/assets/img/post.webp',
+    img: post,
     title: 'Your most unhappy customers are your greatest source of learning.',
     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus obcaecati eius consequuntur libero voluptatem tempora ullam sequi animi hic excepturi, at cum expedita facere necessitatibus nihil sapiente repellat nemo quae.'
   },
   {
     id: 2,
-    img: "/assets/img/post2.webp",
+    img: post2,
     title: "Your most unhappy customers are your greatest source of learning.",
     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus obcaecati eius consequuntur libero voluptatem tempora ullam sequi animi hic excepturi, at cum expedita facere necessitatibus nihil sapiente repellat nemo quae.'
   },
   {
     id: 3,
-    img: "/assets/img/post3.webp",
+    img: post3,
     title: "Your most unhappy customers are your greatest source of learning.",
     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus obcaecati eius consequuntur libero voluptatem tempora ullam sequi animi hic excepturi, at cum expedita facere necessitatibus nihil sapiente repellat nemo quae.'
   },
   {
     id: 4,
-    img: "/assets/img/post4.jpg",
+    img: post4,
     title: "Your most unhappy customers are your greatest source of learning.",
     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus obcaecati eius consequuntur libero voluptatem tempora ullam sequi animi hic excepturi, at cum expedita facere necessitatibus nihil sapiente repellat nemo quae.'
   },
   {
     id: 5,
-    img: "/assets/img/post5.webp",
+    img: post5,
     title: "Your most unhappy customers are your greatest source of learning.",
     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus obcaecati eius consequuntur libero voluptatem tempora ullam sequi animi hic excepturi, at cum expedita facere necessitatibus nihil sapiente repellat nemo quae.'
   },
   {
     id: 6,
-    img: "/assets/img/post6.webp",
+    img: post6,
     title: "Your most unhappy customers are your greatest source of learning.",
     text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus obcaecati eius consequuntur libero voluptatem tempora ullam sequi animi hic excepturi, at cum expedita facere necessitatibus nihil sapiente repellat nemo quae.'
   },
